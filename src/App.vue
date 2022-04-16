@@ -1,4 +1,5 @@
 <template>
+<a-config-provider :locale="locale">
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -6,7 +7,19 @@
     </div>
     <router-view/>
   </div>
+</a-config-provider>
 </template>
+<script>
+import zhCN from 'ant-design-vue/es/locale/zh_CN';
+export default {
+  name: 'app',
+  data() {
+    return {
+      locale: zhCN,
+    }
+  }
+}
+</script>
 
 <style lang="stylus">
 #app
